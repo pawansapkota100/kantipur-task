@@ -1,4 +1,4 @@
-# views.py
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.contrib.auth import login, authenticate
@@ -16,6 +16,7 @@ def profile(request):
         template_name = 'admin_dashboard.html'
 
     return render(request, template_name)
+    
 def register(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
